@@ -19,9 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30689645-5542-427b-b1b7-421202524fee" name="Default Changelist" comment="install">
-      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+    <list default="true" id="30689645-5542-427b-b1b7-421202524fee" name="Default Changelist" comment="index">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +57,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1611834694753</updated>
-      <workItem from="1611834696147" duration="1678000" />
+      <workItem from="1611834696147" duration="2009000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1611834729065</created>
@@ -88,7 +87,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611836547484</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="index">
+      <created>1611836693179</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1611836693179</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,12 +115,13 @@
     <MESSAGE value="First commit" />
     <MESSAGE value="New test" />
     <MESSAGE value="install" />
-    <option name="LAST_COMMIT_MESSAGE" value="install" />
+    <MESSAGE value="index" />
+    <option name="LAST_COMMIT_MESSAGE" value="index" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2" timestamp="1611836552375">
+    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2" timestamp="1611836697387">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1611836552375" />
+    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1611836697387" />
   </component>
 </project>
