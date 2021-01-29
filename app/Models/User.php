@@ -2,10 +2,12 @@
 
 namespace App\Models;
 
+use DebugBar\DebugBar;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use phpDocumentor\Reflection\Types\This;
 
 class User extends Authenticatable
 {
@@ -19,6 +21,7 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'family_id',
         'password',
     ];
 
@@ -40,4 +43,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public static function edit($id, $fields) {
+        $object = User::find($id);
+        $object->fill($fields);
+        $object->save();
+    }
+
 }

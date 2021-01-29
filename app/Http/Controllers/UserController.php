@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
+use App\Models\Family;
 
 class UserController extends Controller
 {
@@ -17,6 +19,7 @@ class UserController extends Controller
         $data = [];
         $data['header'] = false;
         $data['user'] = Auth::user();
+        $data['family'] = Family::find($data['user']->family_id);
         return view('users.index', $data);
     }
 
@@ -49,7 +52,8 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        print_r($id);
+        exit;
     }
 
     /**
@@ -60,7 +64,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        echo 'edit';
     }
 
     /**
@@ -72,7 +76,13 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        $validatedData = $request->validate([
+            'name' => ['required', 'min:2'],
+        ]);
+
+        User::edit($id, $request->all());
+        return redirect('user');
     }
 
     /**
