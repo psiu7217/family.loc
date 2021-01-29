@@ -1,0 +1,23 @@
+{
+    "I love programming.": "Я люболю программирование.",
+    "Name": "Имя",
+    "Email": "Email",
+    "User": "Пользователь",
+    "Update": "Обновить",
+    "Logout": "Выйти",
+    "Profile": "Профиль",
+    "Create": "Создать",
+    "Create new family": "Создать новую семью",
+    "Title": "Заголовок",
+    "Family": "Семья",
+    "Leave your family": "Покинуть семью",
+    "Add a friend to the family": "Добавить друга в семью",
+    "Create Family": "Создать Семью",
+    "Find Family": "Найти Семью",
+    "validation.min.string": "Поле слишком короткое",
+
+
+    "Attention!!!": "Внимание!!!",
+    "The family in which there are no members left will be deleted automatically!!!": "Семья в которой не осталось членов будет удалена автоматически!!!",
+    "All information (receipts, categories, income) will be deleted!": "Вся информация (чеки, категории, доходы) будет удалена!"
+}

@@ -18,8 +18,8 @@ class UserController extends Controller
     {
         $data = [];
         $data['header'] = false;
-        $data['user'] = Auth::user();
-        $data['family'] = Family::find($data['user']->family_id);
+        $data['user'] = User::find(Auth::id());
+//        dd($data['user']->family->users);
         return view('users.index', $data);
     }
 

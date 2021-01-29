@@ -44,10 +44,23 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function family() {
+        return $this->belongsTo(Family::class);
+    }
+
+
+
+
     public static function edit($id, $fields) {
         $object = User::find($id);
         $object->fill($fields);
         $object->save();
+    }
+
+    public static function addFamily($email, $family_id) {
+        $user = User::where('email', $email)->first();
+        $user->family_id = $family_id;
+        $user->save();
     }
 
 }

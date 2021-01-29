@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Family;
+use Illuminate\Support\Facades\Auth;
 
 class FamilyController extends Controller
 {
@@ -36,7 +38,14 @@ class FamilyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => ['required', 'min:2'],
+        ]);
+
+        $family = Family::create($request->all());
+        User::edit(Auth::id(), ['family_id' => $family->id]);
+
+        return redirect('user');
     }
 
     /**
@@ -82,5 +91,16 @@ class FamilyController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+
+    public function addUser(Request $request) {
+        $validatedData = $request->validate([
+            'email' => ['required', 'email'],
+        ]);
+
+        User::addFamily($request->get('email'), Auth::user()->family_id);
+
+        return redirect('user');
     }
 }

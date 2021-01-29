@@ -26,7 +26,7 @@ Route::get('/dashboard', function () {
 
 Route::resource('family', FamilyController::class)->middleware(['auth']);
 Route::resource('user', UserController::class)->middleware(['auth']);
-
+Route::post('addUser', [FamilyController::class, 'addUser'])->name('family.addUser');
 
 
 require __DIR__.'/auth.php';
